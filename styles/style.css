@@ -100,8 +100,6 @@
   
 }
 
-/*main */
-
 .main {
   display: grid;
   justify-items: center;
@@ -193,7 +191,6 @@
   align-items: center;
   border: 2px solid var(--main-color);
   position: relative;
-  
 }
 
 .card_button:focus {
@@ -231,7 +228,6 @@
   color: var(--main-color);
   transition: border 0.3s ease;
   cursor: pointer;
-  
 }
 
 .card__icon-button:focus {
@@ -240,7 +236,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--main-color);
- 
 }
 
 .button__text {
