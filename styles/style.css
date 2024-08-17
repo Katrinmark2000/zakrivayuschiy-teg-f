@@ -23,7 +23,7 @@
   background-size: cover;
   background-attachment: fixed;
   padding-block-start: 100px;
-  color: var(--font-color, #000);
+  color: var(--font-color);
 }
 
 .header {
@@ -34,7 +34,7 @@
   align-items: center;
   margin: auto;
   font-family: var(--accent-font, 'PressStart2P-Regular'), fantasy;
-  background-color: var(--background-color, #fff);
+  background-color: var(--background-color);
   border: var(--main-color) 2px solid;
   text-transform: uppercase;
 }
@@ -114,7 +114,7 @@
 .card_item {
   max-width: 700px;
   border: 2px solid var(--main-color);
-  background: var(--background-color, #fff);
+  background: var(--background-color);
   position: relative;
 }
 
@@ -197,8 +197,8 @@
   outline: none;
 }
 
-.card_button:focus-visible{
- box-shadow: 2px 2px 0 0 var(--font-color, #000);
+.card_button:focus-visible {
+ box-shadow: 2px 2px 0 0 var(--font-color);
 }
 
 .card_button:hover {
@@ -209,7 +209,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--font-color, #000);
+  background-color: var(--font-color);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -243,7 +243,7 @@
   font-size: 14px;
   position: relative;
   z-index: 1;
-  color: var(--button-text-color, #fff);
+  color: var(--button-text-color);
   mix-blend-mode: difference;
 }
 
@@ -252,14 +252,13 @@
   mix-blend-mode: hard-light;
   font-family: var(--accent-font,'PressStart2P-Regular'), fantasy;
   font-size: 14px;
-  -webkit-text-stroke: 1px var(--background-color, #fff);
+  text-shadow: 0 0 1px var(--background-color);
   font-variation-settings: 'wght' var(--accent-font-weight, 700);
   right: 25px;
   top: 57px;
   z-index: 1;
   text-transform: uppercase;
   opacity: 0.5;
-  mix-blend-mode: hard-light;
 }
 
 .card__save-button {
@@ -360,5 +359,16 @@
   .watermark {
     right: 11px;
     top: 56px;
+  }
+}
+
+@supports (
+  (-webkit-text-stroke: 1px var(--background-color)) or
+    (text-stroke: 1px var(--background-color))
+) {
+  .watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
   }
 }
