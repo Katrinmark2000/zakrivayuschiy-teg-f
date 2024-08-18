@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  font-family: var(--accent-font, 'PressStart2P-Regular'), fantasy;
+  font-family: var(--accent-font, 'PressStart2P'), fantasy;
   background-color: var(--background-color);
   border: var(--main-color) 2px solid;
   text-transform: uppercase;
@@ -128,32 +128,32 @@
   min-height: clamp(23.25rem, 16.032rem + 30.798vw, 43.75rem);
 }
 
-.image_card_start {
+.image_saturate {
   filter: saturate(158%);
 }
 
-.image_card_blank {
+.image_hue-rotate {
   filter: hue-rotate(-30deg) brightness(120%);
 }
 
-.image_card_thoughts {
+.image_sepia {
   filter: sepia(60%);
 }
 
-.image_card_ideal {
+.image_grayscale {
   filter: grayscale(0.8);
 }
 
-.image_card_support {
+.image_invert {
   object-position: left;
   filter: invert(0.3);
 }
 
-.image_card_difficulties {
+.image_opacity {
   filter: opacity(0.8);
 }
 
-.image_card_concentration {
+.image_blur {
   object-position: right;
   filter: blur(2px);
 }
@@ -166,7 +166,6 @@
 }
 
 .card_discription {
-  min-height: 224px;
   padding: 25px;
   border-top: 2px solid var(--main-color);
 }
@@ -228,6 +227,10 @@
   color: var(--main-color);
   transition: border 0.3s ease;
   cursor: pointer;
+  block-size: 36px;
+  inline-size: 39px;
+  margin-right: 6px;
+  padding: 0;
 }
 
 .card__icon-button:focus {
@@ -326,7 +329,6 @@
   text-transform: uppercase;
 }
 
-
 @media (width <= 375px) {
   .header_title {
     margin-block-start: 120px;
@@ -360,6 +362,10 @@
     right: 11px;
     top: 56px;
   }
+  .watermark_start {
+    top: 77px;
+  }
+
 }
 
 @supports (
